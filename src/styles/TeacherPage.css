@@ -1,0 +1,134 @@
+.teacher-container {
+    padding: 2rem 0;
+}
+
+/* Login Form */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    text-align: center;
+}
+
+.login-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-input {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    font-size: 1rem;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--radius);
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Dashboard Layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Calendar Overrides */
+.react-calendar {
+    width: 100% !important;
+    border: none !important;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    font-family: inherit !important;
+    padding: 1rem;
+}
+
+.react-calendar__tile--active {
+    background: var(--primary-color) !important;
+    color: white !important;
+    border-radius: 0.5rem;
+}
+
+.react-calendar__tile--now {
+    background: #FEF3C7 !important;
+    color: var(--text-color) !important;
+    border-radius: 0.5rem;
+}
+
+/* Editor Section */
+.editor-section {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.date-header {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.note-textarea {
+    width: 100%;
+    flex-grow: 1;
+    min-height: 300px;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+    margin-bottom: 1rem;
+}
+
+.action-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: var(--radius);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: opacity 0.2s;
+}
+
+.action-btn:hover {
+    opacity: 0.9;
+}
+
+.action-btn:disabled {
+    background-color: var(--text-light);
+    cursor: not-allowed;
+}
