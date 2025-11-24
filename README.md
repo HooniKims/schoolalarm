@@ -6,24 +6,40 @@
 - **교사용**: 로그인(비밀번호: `teacher1234`), 달력 기반 메모 작성, AI 자동 정리(Gemini), 저장/수정/삭제.
 - **학부모/학생용**: 날짜별 알림장 확인 (읽기 전용).
 
-## 설정 방법 (필수)
+## 설치 방법
 
-이 앱을 정상적으로 실행하려면 **Firebase**와 **Gemini API** 설정이 필요합니다.
+### 1. 프로젝트 클론
+```bash
+git clone https://github.com/HooniKims/schoolalarm.git
+cd schoolalarm
+npm install
+```
 
-### 1. Firebase 설정
+### 2. Firebase 설정
 1. [Firebase Console](https://console.firebase.google.com/)에 접속하여 새 프로젝트를 생성합니다.
 2. **Firestore Database**를 생성하고, 보안 규칙을 테스트 모드(또는 적절한 규칙)로 설정합니다.
 3. 프로젝트 설정 > 일반 > 내 앱 > 웹 앱을 추가합니다.
 4. 발급된 `firebaseConfig` 객체 내용을 복사합니다.
-5. `src/firebaseConfig.js` 파일을 열고 내용을 붙여넣습니다.
+5. `src/firebaseConfig.example.js` 파일을 `src/firebaseConfig.js`로 복사하고 내용을 붙여넣습니다:
+```bash
+cp src/firebaseConfig.example.js src/firebaseConfig.js
+```
 
-### 2. Gemini API 설정
-1. [Google AI Studio](https://aistudio.google.com/)에서 API 키를 발급받습니다.
-2. `src/services/gemini.js` 파일을 열고 `YOUR_GEMINI_API_KEY` 부분을 발급받은 키로 교체합니다.
+### 3. Gemini API 설정
+1. [Google AI Studio](https://aistudio.google.com/app/apikey)에서 API 키를 발급받습니다.
+2. `src/services/gemini.example.js` 파일을 `src/services/gemini.js`로 복사하고 API 키를 교체합니다:
+```bash
+cp src/services/gemini.example.js src/services/gemini.js
+```
 
 ## 실행 방법
 ```bash
-npm install
 npm run dev
 ```
 브라우저에서 표시된 주소(예: `http://localhost:5173`)로 접속하세요.
+
+## 기술 스택
+- **Frontend**: React + Vite
+- **Database**: Firebase Firestore
+- **AI**: Google Gemini API (2.0 Flash Exp)
+- **UI**: Vanilla CSS + React Calendar + React Markdown
