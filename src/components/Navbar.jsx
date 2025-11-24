@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { GraduationCap, Users } from 'lucide-react';
 
 const Navbar = () => {
@@ -11,9 +11,11 @@ const Navbar = () => {
             marginBottom: '2rem'
         }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--primary-color)' }}>
-                    School Note
-                </h1>
+                <Link to="/" style={{ textDecoration: 'none' }}>
+                    <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--primary-color)', margin: 0 }}>
+                        School Note
+                    </h1>
+                </Link>
                 <div style={{ display: 'flex', gap: '1rem' }}>
                     <NavLink
                         to="/teacher"
