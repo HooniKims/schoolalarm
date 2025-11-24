@@ -41,15 +41,15 @@ npm run dev
 ## 기술 스택
 - **Frontend**: React + Vite
 - **Database**: Firebase Firestore
-- **AI**: Google Gemini API (1.5 Pro)
+- **AI**: Google Gemini API (1.5 Flash-002)
 - **UI**: Vanilla CSS + React Calendar + React Markdown
 
 ## 최근 수정사항
 
 ### 2025-11-24
-- **Gemini API 모델 업데이트**: `gemini-1.5-flash` → `gemini-1.5-pro`로 변경
-  - `gemini-1.5-flash` 및 `gemini-1.5-flash-latest` 모델이 v1beta API에서 404 오류 발생
-  - 안정적으로 지원되는 `gemini-1.5-pro` 모델로 변경하여 API 호출 안정성 확보
+- **Gemini API 모델 업데이트**: `gemini-1.5-flash` → `gemini-1.5-flash-002`로 변경
+  - 기존 모델들(`gemini-1.5-flash`, `gemini-1.5-flash-latest`, `gemini-1.5-pro`)이 v1beta API에서 404 오류 발생
+  - 2024년 9월 출시된 안정 버전 `gemini-1.5-flash-002`로 변경하여 API 호환성 확보
   - 파일: `src/services/gemini.js`
 
 ## Vercel 배포 방법
