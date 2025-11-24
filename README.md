@@ -43,3 +43,28 @@ npm run dev
 - **Database**: Firebase Firestore
 - **AI**: Google Gemini API (2.0 Flash Exp)
 - **UI**: Vanilla CSS + React Calendar + React Markdown
+
+## Vercel 배포 방법
+
+### 1. Vercel에 프로젝트 연결
+1. [Vercel](https://vercel.com)에 로그인합니다.
+2. "Add New Project"를 클릭합니다.
+3. GitHub 저장소 `HooniKims/schoolalarm`을 선택합니다.
+
+### 2. 환경 변수 설정
+Vercel 프로젝트 설정에서 다음 환경 변수들을 추가합니다:
+
+```
+VITE_FIREBASE_API_KEY=your_firebase_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_project_id.firebasestorage.app
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+VITE_GEMINI_API_KEY=your_gemini_api_key
+```
+
+### 3. 배포
+"Deploy" 버튼을 클릭하면 자동으로 배포됩니다.
+
+> **참고**: 로컬 개발 시에는 `.env` 파일을 생성하여 위 환경 변수들을 설정하세요. (`.env.example` 파일 참고)

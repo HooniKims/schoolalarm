@@ -27,9 +27,3 @@ dist-ssr
 .env
 .env.local
 .env.production
-
-# Firebase config (contains API keys)
-src/firebaseConfig.js
-
-# Gemini API config (contains API key)
-src/services/gemini.js
