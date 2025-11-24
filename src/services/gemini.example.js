@@ -9,7 +9,7 @@ export async function summarizeNote(text) {
     if (!text) return "";
 
     try {
-        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-exp" });
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
         const prompt = `
 다음 교사의 메모를 학부모가 읽기 쉽도록 깔끔한 마크다운 형식으로 정리해주세요.
