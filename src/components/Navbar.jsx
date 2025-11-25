@@ -34,7 +34,7 @@ const Navbar = () => {
                         <span>교사용</span>
                     </NavLink>
                     <NavLink
-                        to="/parent"
+                        to="/parents"
                         style={({ isActive }) => ({
                             display: 'flex',
                             alignItems: 'center',

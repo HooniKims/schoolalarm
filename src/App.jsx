@@ -10,9 +10,9 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Navigate to="/parent" replace />} />
+          <Route path="/" element={<Navigate to="/parents" replace />} />
           <Route path="/teacher" element={<TeacherPage />} />
-          <Route path="/parent" element={<ParentPage />} />
+          <Route path="/parents" element={<ParentPage />} />
         </Routes>
       </div>
     </Router>
